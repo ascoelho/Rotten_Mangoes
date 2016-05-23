@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		438DE0D41CF354DD00F8463B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DE0D31CF354DD00F8463B /* main.m */; };
 		438DE0D71CF354DD00F8463B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DE0D61CF354DD00F8463B /* AppDelegate.m */; };
-		438DE0DA1CF354DD00F8463B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DE0D91CF354DD00F8463B /* ViewController.m */; };
 		438DE0DD1CF354DD00F8463B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438DE0DB1CF354DD00F8463B /* Main.storyboard */; };
 		438DE0DF1CF354DE00F8463B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438DE0DE1CF354DE00F8463B /* Assets.xcassets */; };
 		438DE0E21CF354DE00F8463B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438DE0E01CF354DE00F8463B /* LaunchScreen.storyboard */; };
+		438DE0EB1CF3578A00F8463B /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DE0EA1CF3578A00F8463B /* Movie.m */; };
+		438DE0F01CF3581400F8463B /* MovieCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DE0EF1CF3581400F8463B /* MovieCollectionViewController.m */; };
+		438DE0F51CF362E100F8463B /* MovieCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DE0F41CF362E100F8463B /* MovieCollectionViewCell.m */; };
+		438DE0F91CF375F600F8463B /* CoverFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DE0F81CF375F600F8463B /* CoverFlowLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +23,18 @@
 		438DE0D31CF354DD00F8463B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		438DE0D51CF354DD00F8463B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		438DE0D61CF354DD00F8463B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		438DE0D81CF354DD00F8463B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		438DE0D91CF354DD00F8463B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		438DE0DC1CF354DD00F8463B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		438DE0DE1CF354DE00F8463B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		438DE0E11CF354DE00F8463B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		438DE0E31CF354DE00F8463B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		438DE0E91CF3578A00F8463B /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		438DE0EA1CF3578A00F8463B /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		438DE0EE1CF3581400F8463B /* MovieCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCollectionViewController.h; sourceTree = "<group>"; };
+		438DE0EF1CF3581400F8463B /* MovieCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionViewController.m; sourceTree = "<group>"; };
+		438DE0F31CF362E100F8463B /* MovieCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCollectionViewCell.h; sourceTree = "<group>"; };
+		438DE0F41CF362E100F8463B /* MovieCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionViewCell.m; sourceTree = "<group>"; };
+		438DE0F71CF375F600F8463B /* CoverFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverFlowLayout.h; sourceTree = "<group>"; };
+		438DE0F81CF375F600F8463B /* CoverFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverFlowLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +67,10 @@
 		438DE0D11CF354DD00F8463B /* Rotten Mangoes */ = {
 			isa = PBXGroup;
 			children = (
-				438DE0D51CF354DD00F8463B /* AppDelegate.h */,
-				438DE0D61CF354DD00F8463B /* AppDelegate.m */,
-				438DE0D81CF354DD00F8463B /* ViewController.h */,
-				438DE0D91CF354DD00F8463B /* ViewController.m */,
 				438DE0DB1CF354DD00F8463B /* Main.storyboard */,
-				438DE0DE1CF354DE00F8463B /* Assets.xcassets */,
-				438DE0E01CF354DE00F8463B /* LaunchScreen.storyboard */,
-				438DE0E31CF354DE00F8463B /* Info.plist */,
+				438DE0F61CF3630100F8463B /* Customization */,
+				438DE0ED1CF3579800F8463B /* View Controllers */,
+				438DE0EC1CF3579100F8463B /* Model */,
 				438DE0D21CF354DD00F8463B /* Supporting Files */,
 			);
 			path = "Rotten Mangoes";
@@ -74,9 +79,43 @@
 		438DE0D21CF354DD00F8463B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				438DE0D51CF354DD00F8463B /* AppDelegate.h */,
+				438DE0D61CF354DD00F8463B /* AppDelegate.m */,
+				438DE0DE1CF354DE00F8463B /* Assets.xcassets */,
+				438DE0E01CF354DE00F8463B /* LaunchScreen.storyboard */,
+				438DE0E31CF354DE00F8463B /* Info.plist */,
 				438DE0D31CF354DD00F8463B /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		438DE0EC1CF3579100F8463B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				438DE0E91CF3578A00F8463B /* Movie.h */,
+				438DE0EA1CF3578A00F8463B /* Movie.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		438DE0ED1CF3579800F8463B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				438DE0EE1CF3581400F8463B /* MovieCollectionViewController.h */,
+				438DE0EF1CF3581400F8463B /* MovieCollectionViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		438DE0F61CF3630100F8463B /* Customization */ = {
+			isa = PBXGroup;
+			children = (
+				438DE0F31CF362E100F8463B /* MovieCollectionViewCell.h */,
+				438DE0F41CF362E100F8463B /* MovieCollectionViewCell.m */,
+				438DE0F71CF375F600F8463B /* CoverFlowLayout.h */,
+				438DE0F81CF375F600F8463B /* CoverFlowLayout.m */,
+			);
+			name = Customization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +149,7 @@
 				TargetAttributes = {
 					438DE0CE1CF354DD00F8463B = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = D56C289LAN;
 					};
 				};
 			};
@@ -149,9 +189,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				438DE0DA1CF354DD00F8463B /* ViewController.m in Sources */,
+				438DE0F01CF3581400F8463B /* MovieCollectionViewController.m in Sources */,
+				438DE0F51CF362E100F8463B /* MovieCollectionViewCell.m in Sources */,
 				438DE0D71CF354DD00F8463B /* AppDelegate.m in Sources */,
+				438DE0EB1CF3578A00F8463B /* Movie.m in Sources */,
 				438DE0D41CF354DD00F8463B /* main.m in Sources */,
+				438DE0F91CF375F600F8463B /* CoverFlowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +308,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Rotten Mangoes/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Vectura.Rotten-Mangoes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,7 +321,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Rotten Mangoes/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Vectura.Rotten-Mangoes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -302,6 +349,7 @@
 				438DE0E81CF354DE00F8463B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

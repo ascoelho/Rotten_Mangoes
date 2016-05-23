@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MovieCollectionViewController.h
 //  Rotten Mangoes
 //
 //  Created by Anthony Coelho on 2016-05-23.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MovieCollectionViewController : UICollectionViewController
 
 @end
-
