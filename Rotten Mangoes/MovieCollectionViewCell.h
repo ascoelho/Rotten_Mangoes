@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Movie.h"
 
 @interface MovieCollectionViewCell : UICollectionViewCell
 
+@property (nonatomic) UIStoryboard *storyboard;
+@property (strong, nonatomic) Movie *movie;
+
+- (void)configureCell:(MovieCollectionViewCell *)cell atIndex:(NSIndexPath *)indexPath withReviews:(NSArray *)reviews;
 
 @end

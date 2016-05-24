@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		434EB6361CF4ADED00E4340C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434EB6351CF4ADED00E4340C /* MapKit.framework */; };
+		434EB6391CF4C88E00E4340C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434EB6381CF4C88E00E4340C /* MapViewController.m */; };
+		434EB63C1CF4DBAE00E4340C /* Theatre.m in Sources */ = {isa = PBXBuildFile; fileRef = 434EB63B1CF4DBAE00E4340C /* Theatre.m */; };
 		438DE0D41CF354DD00F8463B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DE0D31CF354DD00F8463B /* main.m */; };
 		438DE0D71CF354DD00F8463B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DE0D61CF354DD00F8463B /* AppDelegate.m */; };
 		438DE0DD1CF354DD00F8463B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438DE0DB1CF354DD00F8463B /* Main.storyboard */; };
@@ -19,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		434EB6351CF4ADED00E4340C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		434EB6371CF4C88E00E4340C /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		434EB6381CF4C88E00E4340C /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		434EB63A1CF4DBAE00E4340C /* Theatre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theatre.h; sourceTree = "<group>"; };
+		434EB63B1CF4DBAE00E4340C /* Theatre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theatre.m; sourceTree = "<group>"; };
 		438DE0CF1CF354DD00F8463B /* Rotten Mangoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rotten Mangoes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		438DE0D31CF354DD00F8463B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		438DE0D51CF354DD00F8463B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -42,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				434EB6361CF4ADED00E4340C /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +60,7 @@
 		438DE0C61CF354DD00F8463B = {
 			isa = PBXGroup;
 			children = (
+				434EB6351CF4ADED00E4340C /* MapKit.framework */,
 				438DE0D11CF354DD00F8463B /* Rotten Mangoes */,
 				438DE0D01CF354DD00F8463B /* Products */,
 			);
@@ -94,6 +104,8 @@
 			children = (
 				438DE0E91CF3578A00F8463B /* Movie.h */,
 				438DE0EA1CF3578A00F8463B /* Movie.m */,
+				434EB63A1CF4DBAE00E4340C /* Theatre.h */,
+				434EB63B1CF4DBAE00E4340C /* Theatre.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -103,6 +115,8 @@
 			children = (
 				438DE0EE1CF3581400F8463B /* MovieCollectionViewController.h */,
 				438DE0EF1CF3581400F8463B /* MovieCollectionViewController.m */,
+				434EB6371CF4C88E00E4340C /* MapViewController.h */,
+				434EB6381CF4C88E00E4340C /* MapViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -190,11 +204,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				438DE0F01CF3581400F8463B /* MovieCollectionViewController.m in Sources */,
+				434EB63C1CF4DBAE00E4340C /* Theatre.m in Sources */,
 				438DE0F51CF362E100F8463B /* MovieCollectionViewCell.m in Sources */,
 				438DE0D71CF354DD00F8463B /* AppDelegate.m in Sources */,
 				438DE0EB1CF3578A00F8463B /* Movie.m in Sources */,
 				438DE0D41CF354DD00F8463B /* main.m in Sources */,
 				438DE0F91CF375F600F8463B /* CoverFlowLayout.m in Sources */,
+				434EB6391CF4C88E00E4340C /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

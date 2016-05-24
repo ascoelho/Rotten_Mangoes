@@ -18,9 +18,6 @@
 @property (strong, nonatomic) NSString *synopsis;
 @property (strong, nonatomic) NSString *reviewsURL;
 
-
-
-
 - (instancetype)initWithDictionary:(NSDictionary *)dict;
 
 @end

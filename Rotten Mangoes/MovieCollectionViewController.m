@@ -10,10 +10,12 @@
 #import "MovieCollectionViewCell.h"
 #import "Movie.h"
 #import "CoverFlowLayout.h"
+#import "MapViewController.h"
 
 @interface MovieCollectionViewController ()
 
 @property (strong, nonatomic) NSArray *objects;
+@property (strong, nonatomic) NSIndexPath *currentCellIndexPath;
 
 @end
 
@@ -114,11 +116,19 @@ static NSString * const reuseIdentifier = @"MovieCell";
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
+    
+    
+}
+
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
 
     MovieCollectionViewCell *cell = (MovieCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    
+    cell.movie = self.objects[indexPath.row];
+    self.currentCellIndexPath = indexPath;
     
     NSURL *rottenTomatoesURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@?apikey=sr9tdu3checdyayjz85mff8j&page_limit=3",[self.objects[indexPath.row] reviewsURL]]];
     
@@ -142,8 +152,9 @@ static NSString * const reuseIdentifier = @"MovieCell";
                 NSArray *reviews = parsedData[@"reviews"];
 
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [self configureCell:cell atIndex:indexPath withReviews:reviews];
-                    //[self.collectionView reloadData];
+                   
+                    [cell configureCell:cell atIndex:indexPath withReviews:reviews];
+                   
                 });
                 
             } else {
@@ -160,55 +171,19 @@ static NSString * const reuseIdentifier = @"MovieCell";
     [apiTask resume];
 
     
-
-    
-
-    
-
-
 }
 
 
-- (void)configureCell:(MovieCollectionViewCell *)cell atIndex:(NSIndexPath *)indexPath withReviews:(NSArray *)reviews {
-    
-    UILabel *yearLabel = (UILabel *)[cell viewWithTag:4];
-    UILabel *ratingLabel = (UILabel *)[cell viewWithTag:5];
-    UILabel *synopsisLabel = (UILabel *)[cell viewWithTag:6];
-    synopsisLabel.numberOfLines = 0;
-    UILabel *reviewsLabel = (UILabel *)[cell viewWithTag:7];
-    reviewsLabel.numberOfLines = 0;
-    
-    yearLabel.text = [NSString stringWithFormat:@"Year: %@",[self.objects[indexPath.row] releaseYear]];
-    ratingLabel.text = [NSString stringWithFormat:@"Rated: %@",[self.objects[indexPath.row] mpaaRating]];
-    synopsisLabel.text = [NSString stringWithFormat:@"Synopsis: %@",[self.objects[indexPath.row] synopsis]];
-    
-    NSMutableString *reviewsString = [NSMutableString new];
-    for (int i = 0; i < reviews.count; i++) {
-        [reviewsString appendString:[NSString stringWithFormat:@"Review %d: %@\n\n",i+1, [reviews[i] objectForKey:@"quote"]]];
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"showMapVC"]) {
+        
+        
+        MapViewController *mapVC = (MapViewController*)[segue destinationViewController];
+        mapVC.movie = self.objects[self.currentCellIndexPath.row];
+        
     }
-    reviewsLabel.text = reviewsString;
-    
-    UIImageView *movieImageView = (UIImageView *)[cell viewWithTag:1];
-    UIView *backView = (UIView *)[cell viewWithTag:3];
-    
-    [UIView transitionWithView:movieImageView
-                      duration:1.0
-                       options:UIViewAnimationOptionTransitionFlipFromRight
-                    animations: ^{
-                        
-                        if (backView.hidden == YES) {
-                            backView.hidden = NO;
-                            [movieImageView addSubview:backView];
-                        }
-                        else {
-                            backView.hidden = YES;
-                            
-                        }
-                        
-                    }
-                    completion:NULL];
-    
 }
+
 
 
 
